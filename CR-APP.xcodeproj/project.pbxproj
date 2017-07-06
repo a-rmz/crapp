@@ -15,7 +15,6 @@
 		C7121C4F1F0C508F0074C90C /* CR_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7121C4E1F0C508F0074C90C /* CR_APPTests.swift */; };
 		C7121C5A1F0C508F0074C90C /* CR_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7121C591F0C508F0074C90C /* CR_APPUITests.swift */; };
 		C7121C681F0C50B60074C90C /* SwiftyDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7121C671F0C50B60074C90C /* SwiftyDraw.swift */; };
-		C7121C6A1F0C52A60074C90C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7121C691F0C52A60074C90C /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		C7121C591F0C508F0074C90C /* CR_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CR_APPUITests.swift; sourceTree = "<group>"; };
 		C7121C5B1F0C508F0074C90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7121C671F0C50B60074C90C /* SwiftyDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyDraw.swift; sourceTree = "<group>"; };
-		C7121C691F0C52A60074C90C /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				C7121C391F0C508F0074C90C /* AppDelegate.swift */,
-				C7121C691F0C52A60074C90C /* ImageViewController.swift */,
 				C7121C3B1F0C508F0074C90C /* ViewController.swift */,
 				C7121C3D1F0C508F0074C90C /* Main.storyboard */,
 				C7121C401F0C508F0074C90C /* Assets.xcassets */,
@@ -267,7 +264,6 @@
 			files = (
 				C7121C681F0C50B60074C90C /* SwiftyDraw.swift in Sources */,
 				C7121C3C1F0C508F0074C90C /* ViewController.swift in Sources */,
-				C7121C6A1F0C52A60074C90C /* ImageViewController.swift in Sources */,
 				C7121C3A1F0C508F0074C90C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +511,7 @@
 				C7121C601F0C508F0074C90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7121C611F0C508F0074C90C /* Build configuration list for PBXNativeTarget "CR-APPTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +520,7 @@
 				C7121C631F0C508F0074C90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7121C641F0C508F0074C90C /* Build configuration list for PBXNativeTarget "CR-APPUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +529,7 @@
 				C7121C661F0C508F0074C90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
