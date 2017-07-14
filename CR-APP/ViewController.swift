@@ -23,8 +23,10 @@ class ViewController: UIViewController, SwiftyDrawViewDelegate {
         self.drawingView.addSubview(viewToDraw)
         
         viewToDraw.delegate = self
+        
+        viewToDraw.lineWidth = CGFloat(10)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,8 +45,8 @@ class ViewController: UIViewController, SwiftyDrawViewDelegate {
             self.timer.invalidate()
         }
         
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.clearCanvas), userInfo: nil, repeats: false)
-
+        self.timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.clearCanvas), userInfo: nil, repeats: false)
+        
     }
     
     func clearCanvas() {
@@ -72,7 +74,7 @@ class ViewController: UIViewController, SwiftyDrawViewDelegate {
         
         let postData = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://a0bc4589.ngrok.io/api")! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "https://8c659895.ngrok.io/api")! as URL)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = postData
@@ -83,6 +85,14 @@ class ViewController: UIViewController, SwiftyDrawViewDelegate {
                 print("\(error!)")
             } else {
                 let httpResponse = response as? HTTPURLResponse
+                let responseString = String(data: data!, encoding: .utf8)
+                
+                DispatchQueue.main.async(execute: {
+                    self.recognizedText.resignFirstResponder()
+                    self.recognizedText.text! = self.recognizedText.text! + responseString!
+                })
+                
+                print(responseString!)
                 print("\(httpResponse!)")
             }
         })
